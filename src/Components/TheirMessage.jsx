@@ -3,7 +3,7 @@ import React from 'react'
 const TheirMessage = ({ lastMessage, message }) => {
     const isFirstMessageByUser = !lastMessage || lastMessage.sender.username !== message.sender.username;
   return  (
-    <div className='message-row'>
+    <div className='their-message-row'>
         {isFirstMessageByUser && (
             <div 
                 className='message-avatar'
