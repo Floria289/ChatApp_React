@@ -12,8 +12,15 @@ const MyMessage = ({ message }) => {
         )
     }
   return (
-    <div className='message' style={{ float: 'right', marginRight: '18px', color: 'white', backgroundColor: '#3B2A50' }}>
-        {message.text}
+    <div className='message-row' style={{marginLeft: '600px'}}>
+        <div className='message' style={{marginRight: '4px', color: 'white', backgroundColor: '#3B2A50' }}>
+            {message.text}
+        </div>
+
+        <div 
+            className='message-avatar'
+            style={{backgroundImage: `url(${message?.sender?.avatar})`}}
+        />
     </div>
   )
 }

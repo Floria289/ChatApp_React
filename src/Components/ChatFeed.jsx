@@ -8,8 +8,7 @@ const Chatfeed = (props) => {
 
   const chat = chats && chats[activeChat];
 
-  const renderReadReceipts = (message, isMyMessage) => {
-    chat.people.map((person, index)=> person.last_read === message.id && (
+  const renderReadReceipts = (message, isMyMessage) => chat.people.map((person, index)=> person.last_read === message.id && (
         <div
             key={`read_${index}`}
             className="read-receipts"
@@ -18,8 +17,8 @@ const Chatfeed = (props) => {
                 backgroundImage: person.person.avatar && `url(${person.person.avatar})`,
             }}
         />
-    ))
-  }
+    ));
+  
 
   const renderMessages = () => {
     const keys = Object.keys(messages);
@@ -42,9 +41,9 @@ const Chatfeed = (props) => {
                 </div>
             </div>
         );
-    })
-  }
-  renderMessages();
+    });
+  };
+
 
   if(!chat) return "Loading...";
 
@@ -64,7 +63,7 @@ const Chatfeed = (props) => {
     
     
     </div>
-  )
-}
+  );
+};
 
-export default Chatfeed
+export default Chatfeed;
