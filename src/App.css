@@ -103,13 +103,6 @@
     margin-left: 18px;
   }
 
-  .my-message-row {
-    float: right;
-    width: 14%;
-    display: flex;
-    margin-right: 0px;
-  }
-  
   .message-block {
     width: 100%;
     display: inline-block;
